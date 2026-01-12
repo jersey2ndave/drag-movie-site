@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRAG - Official Movie Site</title>
+    <meta name="description" content="DRAG - A comedy-thriller about two burglars whose simple heist goes hilariously wrong. Starring Lizzy Caplan and John Stamos.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">DRAG</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#cast">Cast</a></li>
+            <li><a href="#trailer">Trailer</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="splatter"></div>
+        <!-- Nail -->
+        <img src="images/Nail real.png" alt="" class="prop prop-nail">
+        <div class="hero-content">
+            <img src="images/Drag_title small.png" alt="DRAG" class="hero-title-image">
+            <canvas id="drag-game" height="60"></canvas>
+            <p class="hero-tagline">Back pain. It's all in your head.</p>
+            <div class="hero-info">
+                <span class="genre-tag">Comedy</span>
+                <span class="genre-tag">Thriller</span>
+            </div>
+            <a href="#trailer" class="cta-button">Watch Trailer</a>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <!-- Knife -->
+        <img src="images/knife real.png" alt="" class="prop prop-knife">
+        <div class="container">
+            <h2 class="section-title">The Story</h2>
+            <div class="about-content">
+                <div class="synopsis">
+                    <p class="synopsis-text">
+                        A routine robbery at a rural house turns into a nightmare for two amateur
+                        burglars when one of them throws out her back. Things spiral out of control
+                        as they try to escape before the homeowner returns.
+                    </p>
+                </div>
+                <div class="movie-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Written & Directed By</span>
+                        <span class="detail-value">Raviv Ullman & Greg Yagolnitzer</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Producers</span>
+                        <span class="detail-value">Jake DeVito, Lucy DeVito & Danny DeVito</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cast" class="cast-section">
+        <div class="splatter"></div>
+        <!-- Frying Pan -->
+        <img src="images/Frying pan real.png" alt="" class="prop prop-pan">
+        <div class="container">
+            <h2 class="section-title">The Cast</h2>
+            <div class="cast-grid">
+                <div class="cast-card">
+                    <div class="cast-image" style="background-image: url('images/Lizzy.jpg');"></div>
+                    <h3 class="cast-name">Lizzy Caplan</h3>
+                    <p class="cast-known">Mean Girls, Masters of Sex, Fleishman Is in Trouble</p>
+                </div>
+                <div class="cast-card">
+                    <div class="cast-image" style="background-image: url('images/John.jpg');"></div>
+                    <h3 class="cast-name">John Stamos</h3>
+                    <p class="cast-known">Full House, ER, Big Shot</p>
+                </div>
+                <div class="cast-card">
+                    <div class="cast-image" style="background-image: url('images/Lucy.jpg');"></div>
+                    <h3 class="cast-name">Lucy DeVito</h3>
+                    <p class="cast-known">The Penguin, Deadbeat, Jersey Films 2nd Ave</p>
+                </div>
+                <div class="cast-card">
+                    <div class="cast-image" style="background-image: url('images/Christine.jpg');"></div>
+                    <h3 class="cast-name">Christine Ko</h3>
+                    <p class="cast-known">Dave, Upload, Tigertail</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trailer" class="trailer-section">
+        <!-- Sculpture -->
+        <img src="images/Sculpture real.png" alt="" class="prop prop-sculpture">
+        <div class="container">
+            <h2 class="section-title">Trailer</h2>
+            <div class="trailer-placeholder">
+                <div class="play-button">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </div>
+                <p class="coming-soon">Coming Soon</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">DRAG</div>
+            <p class="footer-credit">A Jersey Films 2nd Avenue Production</p>
+            <div class="footer-links">
+                <a href="https://www.imdb.com/title/tt35893068/" target="_blank" rel="noopener">IMDb</a>
+            </div>
+            <p class="copyright">&copy; 2025 Jersey Films 2nd Avenue. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
