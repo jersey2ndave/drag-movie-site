@@ -84,10 +84,55 @@ body {
         -700px -20px 0 1px var(--color-gold);
 }
 
+/* Breaking News Banner */
+.breaking-news-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, var(--color-gold-dark), var(--color-gold), var(--color-gold-dark));
+    text-decoration: none;
+    animation: bannerPulse 3s ease-in-out infinite;
+}
+
+.breaking-news-banner:hover {
+    background: linear-gradient(90deg, var(--color-gold), var(--color-gold-light), var(--color-gold));
+}
+
+.breaking-label {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-dark);
+    background: var(--color-dark);
+    color: var(--color-gold-light);
+    padding: 4px 10px;
+}
+
+.breaking-text {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-dark);
+}
+
+@keyframes bannerPulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(201, 162, 39, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(201, 162, 39, 0.8); }
+}
+
 /* Navigation */
 .navbar {
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -527,7 +572,24 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .breaking-news-banner {
+        padding: 8px 15px;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .breaking-label {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+    }
+
+    .breaking-text {
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
     .navbar {
+        top: 50px;
         padding: 16px 24px;
     }
 
