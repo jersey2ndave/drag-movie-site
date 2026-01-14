@@ -91,8 +91,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    padding: 10px 20px;
-    margin-top: 70px;
+    padding: 12px 20px 8px;
+    margin-top: 54px;
     background: linear-gradient(90deg, var(--color-gold-dark), var(--color-gold), var(--color-gold-dark));
     text-decoration: none;
     animation: bannerPulse 3s ease-in-out infinite;
@@ -111,6 +111,7 @@ body {
     background: var(--color-dark);
     color: var(--color-gold-light);
     padding: 4px 10px;
+    line-height: 1;
 }
 
 .breaking-text {
@@ -119,6 +120,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--color-dark);
+    line-height: 1;
 }
 
 @keyframes bannerPulse {
@@ -136,7 +138,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 12px 40px;
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     transition: background 0.3s ease;
