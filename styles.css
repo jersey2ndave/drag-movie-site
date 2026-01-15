@@ -262,6 +262,20 @@ body {
     background: var(--color-gold-light);
 }
 
+.cta-button-secondary {
+    margin-left: 16px;
+    background: transparent;
+    color: var(--color-gold);
+    border: 2px solid var(--color-gold);
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+.cta-button-secondary:hover {
+    background: var(--color-gold);
+    color: var(--color-dark);
+}
+
 /* Section Styles */
 .section-title {
     font-family: var(--font-display);
@@ -566,6 +580,131 @@ body {
     color: rgba(255, 255, 255, 0.4);
 }
 
+/* Mailing List Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--color-dark-soft);
+    border: 2px solid var(--color-gold);
+    padding: 50px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--color-gold);
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: var(--color-gold-light);
+}
+
+.modal-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    color: var(--color-gold);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#mc_embed_signup {
+    background: transparent;
+}
+
+#mc_embed_signup .mc-field-group {
+    margin-bottom: 20px;
+}
+
+#mc_embed_signup label {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-light);
+    margin-bottom: 10px;
+}
+
+#mc_embed_signup .asterisk {
+    color: var(--color-gold);
+}
+
+#mc_embed_signup input[type="email"] {
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-gold);
+    color: var(--color-light);
+    font-size: 1rem;
+    font-family: var(--font-body);
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+#mc_embed_signup input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-gold-light);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#mc_embed_signup input[type="email"]::placeholder {
+    color: var(--color-gray);
+}
+
+#mc_embed_signup .button {
+    width: 100%;
+    padding: 16px;
+    background: var(--color-gold);
+    color: var(--color-dark);
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-family: var(--font-body);
+}
+
+#mc_embed_signup .button:hover {
+    background: var(--color-gold-light);
+    transform: translateY(-2px);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .breaking-news-banner {
@@ -602,6 +741,19 @@ body {
 
     .hero-title-image {
         max-width: 90vw;
+    }
+
+    .cta-button-secondary {
+        margin-left: 0;
+        margin-top: 16px;
+    }
+
+    .modal-content {
+        padding: 40px 30px;
+    }
+
+    .modal-title {
+        font-size: 1.4rem;
     }
 
     .about-content {
