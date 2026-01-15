@@ -58,6 +58,7 @@
             <img src="images/Drag_title small.png" alt="DRAG" class="hero-title-image">
             <a href="https://jersey2ndave.com" target="_blank" rel="noopener" class="production-link">A Jersey Films 2nd Avenue Production</a>
             <a href="https://www.instagram.com/dragthemovie/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener" class="cta-button">Follow Us on Instagram</a>
+            <button class="cta-button cta-button-secondary" onclick="openMailingListModal()">Join Our Mailing List</button>
             <canvas id="drag-game" height="60"></canvas>
             <p class="hero-tagline">Back pain. It's all in your head.</p>
             <p class="genre-text">a thriller comedy</p>
@@ -167,6 +168,54 @@
             <p class="copyright">&copy; 2025 Jersey Films 2nd Avenue. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Mailing List Modal -->
+    <div id="mailing-list-modal" class="modal-overlay" onclick="closeMailingListModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeMailingListModal()">&times;</button>
+            <h2 class="modal-title">Stay Up to Date on All Things Drag!</h2>
+            <div id="mc_embed_signup">
+                <form action="https://jersey2ndave.us16.list-manage.com/subscribe/post?u=1f6a50738d441281e9278dea8&amp;id=cf86d7c7b1&amp;f_id=00f0c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                    <div id="mc_embed_signup_scroll">
+                        <div class="mc-field-group">
+                            <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" placeholder="Enter your email">
+                        </div>
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display: none;"></div>
+                            <div class="response" id="mce-success-response" style="display: none;"></div>
+                        </div>
+                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                            <input type="text" name="b_1f6a50738d441281e9278dea8_cf86d7c7b1" tabindex="-1" value="">
+                        </div>
+                        <div class="clear">
+                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openMailingListModal() {
+            document.getElementById('mailing-list-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMailingListModal(event) {
+            if (!event || event.target === event.currentTarget) {
+                document.getElementById('mailing-list-modal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeMailingListModal();
+            }
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
