@@ -54,7 +54,9 @@
 
     <a href="https://schedule.sxsw.com/films/2241467" target="_blank" rel="noopener" class="breaking-news-banner">
         <span class="breaking-label">Now Showing</span>
-        <span class="breaking-text">Drag at SXSW! Coming Soon to the Overlook Film Festival!</span>
+        <span class="breaking-text">Drag at SXSW!</span>
+        <span class="breaking-label">Coming Soon</span>
+        <span class="breaking-text">to the Overlook Film Festival!</span>
     </a>
 
     <header class="hero">
@@ -213,6 +215,30 @@
         <div class="container">
             <h2 class="section-title">Latest News</h2>
             <div class="news-grid">
+                <a href="https://screenrant.com/danny-devito-lizzy-caplan-drag-movie-home-alone-twist-sxsw/" target="_blank" rel="noopener" class="news-card">
+                    <div class="news-thumbnail"><img src="images/Screen Rant Logo.avif" alt="Danny DeVito & Lizzy Caplan's New Thriller Movie - Screen Rant"></div>
+                    <p class="news-date">March 17, 2026</p>
+                    <h3 class="news-title">Danny DeVito &amp; Lizzy Caplan's New Thriller Movie Puts An Exciting Twist On Home Alone</h3>
+                    <p class="news-excerpt">A home invasion thriller where two sisters attempt a robbery gone wrong — Lizzy Caplan describes it as "like Home Alone with two girls." Read the full story on Screen Rant.</p>
+                </a>
+                <a href="https://horrormovieblog.com/drag-leave-no-woman-behind-sxsw-2026-review/" target="_blank" rel="noopener" class="news-card">
+                    <div class="news-thumbnail"><img src="images/307.jpeg" alt="Drag: Leave No Woman Behind - Horror Movie Blog"></div>
+                    <p class="news-date">March 16, 2026</p>
+                    <h3 class="news-title">Drag // Leave No Woman Behind: SXSW 2026 Review</h3>
+                    <p class="news-excerpt">Horror Movie Blog praises the lead actresses' chemistry and comedic timing in this chaotic comedy-thriller that refuses to leave any woman behind. Read the full review on Horror Movie Blog.</p>
+                </a>
+                <a href="https://people.com/john-stamos-reveals-how-danny-devito-got-him-to-show-his-butt-in-drag-exclusive-11927790" target="_blank" rel="noopener" class="news-card">
+                    <div class="news-thumbnail"><img src="images/people-logo.png" alt="John Stamos on 'Drag' - PEOPLE"></div>
+                    <p class="news-date">March 2026</p>
+                    <h3 class="news-title">John Stamos Reveals How Danny DeVito Got Him to Show His Butt in 'Drag'</h3>
+                    <p class="news-excerpt">John Stamos opens up in an exclusive PEOPLE interview about what it took for Danny DeVito to convince him to bare it all in DRAG. Read the full story on PEOPLE.</p>
+                </a>
+                <a href="https://filmobsessive.com/film/new-releases/sxsw-26-drag-aint-no-drag-at-all/" target="_blank" rel="noopener" class="news-card">
+                    <div class="news-thumbnail"><img src="images/Film Obsessed logo.png" alt="SXSW '26: Drag Ain't No Drag at All - Film Obsessive"></div>
+                    <p class="news-date">March 15, 2026</p>
+                    <h3 class="news-title">SXSW '26: Drag Ain't No Drag at All</h3>
+                    <p class="news-excerpt">Film Obsessive calls DRAG "a damn good time," praising its unexpected plot twists and physical performances in a masterfully confined setting. Read the full review on Film Obsessive.</p>
+                </a>
                 <a href="https://www.themarysue.com/drag-a-hilarious-unexpectedly-unhinged-ride-where-you-need-to-go-in-blind-sxsw-review/" target="_blank" rel="noopener" class="news-card">
                     <div class="news-thumbnail"><img src="images/Mary Sue.png" alt="'Drag' SXSW Review - The Mary Sue"></div>
                     <p class="news-date">March 15, 2026</p>
@@ -307,6 +333,14 @@
             <p class="copyright">&copy; 2025 Jersey Films 2nd Avenue. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); lightboxNav(-1)">&#8249;</button>
+        <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+        <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); lightboxNav(1)">&#8250;</button>
+    </div>
 
     <!-- Mailing List Modal -->
     <div id="mailing-list-modal" class="modal-overlay" onclick="closeMailingListModal(event)">

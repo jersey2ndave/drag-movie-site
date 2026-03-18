@@ -824,6 +824,80 @@ body {
     color: rgba(255, 255, 255, 0.4);
 }
 
+/* Lightbox */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#lightbox-img {
+    max-width: 95vw;
+    max-height: 90vh;
+    object-fit: contain;
+    display: block;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--color-gold);
+    font-size: 2.5rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1;
+    transition: color 0.2s ease;
+}
+
+.lightbox-close:hover {
+    color: var(--color-gold-light);
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--color-gold);
+    color: var(--color-gold);
+    font-size: 2.5rem;
+    line-height: 1;
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lightbox-nav:hover {
+    background: var(--color-gold);
+    color: var(--color-dark);
+}
+
+.lightbox-prev { left: 16px; }
+.lightbox-next { right: 16px; }
+
+.carousel-slide img {
+    cursor: pointer;
+}
+
 /* Mailing List Modal */
 .modal-overlay {
     position: fixed;
@@ -1112,7 +1186,7 @@ body {
 
 .prop-sculpture {
     width: 300px;
-    top: 10%;
+    top: 2%;
     left: 8%;
     animation: floatSculpture 28s ease-in-out infinite;
 }

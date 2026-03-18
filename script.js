@@ -323,6 +323,41 @@ if (canvas) {
     animate();
 }
 
+// Lightbox for carousel images
+const lightboxOverlay = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const carouselImages = Array.from(document.querySelectorAll('.carousel-slide img'));
+let lightboxIndex = 0;
+
+carouselImages.forEach((img, i) => {
+    img.addEventListener('click', () => {
+        lightboxIndex = i;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+function closeLightbox() {
+    lightboxOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function lightboxNav(dir) {
+    lightboxIndex = (lightboxIndex + dir + carouselImages.length) % carouselImages.length;
+    const img = carouselImages[lightboxIndex];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+}
+
+document.addEventListener('keydown', (e) => {
+    if (!lightboxOverlay.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(1);
+});
+
 // Hamburger menu toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
