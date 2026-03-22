@@ -407,8 +407,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Intersection Observer for fade-in animations
 const observerOptions = {
     root: null,
-    rootMargin: '0px',
-    threshold: 0.1
+    rootMargin: '0px 0px 300px 0px',
+    threshold: 0
 };
 
 const observer = new IntersectionObserver((entries) => {
